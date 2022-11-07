@@ -127,17 +127,9 @@ async function init() {
     }
 
 
-    // Mark invalid word
+    // Mark invalid word (could update later)
     function markInvalidWord() {
-        // flash red on the letter divs' borders
-        for (let i = 0; i < ANSWER_LENGTH; i++) {
-            letters[currentRow * ANSWER_LENGTH + i].classList.add("invalid");
-
-            // set a timeout to allow you to add back the ivalid class
-            setTimeout(function () {
-                letters[currentRow * ANSWER_LENGTH + i].classList.remove("invalid")
-            }, 10);
-        }
+        alert("not a valid word. please try again.")
     }
 
     document.addEventListener("keydown", function handleKeyPress (event){
